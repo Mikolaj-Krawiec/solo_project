@@ -1,0 +1,20 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $text-color-light;
+  background-color: $brand-main-color;
+  border-radius: 3px;
+  padding: 0 10px;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  text-decoration: none;
+  font-family: $text-font;
+  font-weight: 300;
+
+  
+  .icon{
+    line-height: 0;
+  }
+}

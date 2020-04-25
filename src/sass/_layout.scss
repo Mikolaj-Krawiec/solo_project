@@ -1,0 +1,64 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: $background-color;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.layout{
+  display: flex;
+
+  .page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // flex: 1 0 1 ;
+
+    .content{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.rwd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// @media (min-width: 1200px) {
+//   .container {
+//     max-width: 1140px;
+//   }
+// }
+
+// @media (max-width: 1200px) {
+//   .container {
+//     max-width: 960px;
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   .container {
+//     max-width: 720px;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .container {
+//     max-width: 540px;
+//   }
+// }
+
+// @media (max-width: 576px) {
+//   .rwd {
+//     flex-direction: column;
+//   }
+// }

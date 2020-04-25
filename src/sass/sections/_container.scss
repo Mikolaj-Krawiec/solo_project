@@ -1,0 +1,26 @@
+.container {
+  min-height: 600px;
+  box-sizing: content-box;
+  background-color: $background-color-container;
+  margin: 0 20px 20px 20px;
+  box-shadow: 0 0 10px $background-color2;
+
+  &:first-of-type {
+    margin: 20px;
+  }
+
+  .container-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-body > * {
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+}
