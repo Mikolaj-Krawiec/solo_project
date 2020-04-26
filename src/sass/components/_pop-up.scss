@@ -1,0 +1,30 @@
+.pop-up {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  background-color: $background-color-container;
+
+  .title {
+    text-transform: none;
+    font-size: 0.9rem;
+  }
+
+  .pop-up-body {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      width: 100px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.active{
+  display: block;
+}

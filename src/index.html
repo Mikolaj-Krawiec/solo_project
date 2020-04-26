@@ -8,9 +8,19 @@
     <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
 </head>
 <body>
+    <div id="quit" class="pop-up">
+        <div class="title">Do you really want to Quit?</div>
+        <div class="pop-up-body">
+            <a href="#" class="btn btn-gray">Cancel</a>
+            <a href="#" class="btn">Quit</a>
+        </div>
+    </div>
+
     <div class="overlay"></div>
+    <div class="overlay overlay-nav"></div>
 
     <div class="layout">
+
         <div class="nav-background"></div>
         <nav>
             <div class="navbar">
@@ -22,39 +32,39 @@
                         <div class="line3"></div>
                     </div>
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-items">
                     <li class="menu">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item nav-link" href="#general">
                             <i class="icon-general icon"></i> 
                         General</a>
                     </li>
                     <li class="menu">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item nav-link" href="#details">
                             <i class="icon-details icon"></i> 
                         Details</a>
                     </li>
                     <li class="menu">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item nav-link" href="#links">
                             <i class="icon-links icon"></i> 
                         Links</a>
                     </li>
-                    <li class="menu" >
-                        <a class="nav-link" href="#">
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#banners">
                             <i class="icon-banners icon"></i> 
                         Banners</a>
                     </li>
                     <li class="menu">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item nav-link" href="#personaldata">
                             <i class="icon-personaldata icon"></i> 
                         Personal data</a>
                     </li>
                     <li class="menu">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item nav-link" href="#payout">
                             <i class="icon-payout icon"></i> 
                         Payout</a>
                     </li>
                     <li class="menu">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item nav-link" href="#postback">
                             <i class="icon-postback icon"></i> 
                         Postback</a>
                     </li>
@@ -62,12 +72,12 @@
                 <div class="hr"></div>
     
                 
-                <ul class="nav-links">
+                <ul class="nav-items">
                     
-                    <div class="manager nav-link">YOUR MANAGER</div>
+                    <div class="manager nav-item">YOUR MANAGER</div>
     
                     <li class="person">   
-                    <a class="nav-link" herf="#">
+                    <a class="nav-item" herf="#">
                         <div class="avatar">
                             <img src="./images/avatar/person_1.png" alt="">
                         </div>
@@ -77,7 +87,9 @@
                 </ul>
             </div>
         </nav>
-        <div class="page">
+
+        <div class="pages_topbar">
+
             <div class="top-bar">
                 <ul class="top-links">
                     <li class="top-link">
@@ -97,66 +109,302 @@
                         </div>
                     </li>
                     <li class="top-link">
-                        <i class="icon-quit"></i> 
+                        <a class="pop-up-message" href="#quit"><i class="icon-quit"></i></a> 
                     </li>
                 </ul>
             </div>
+
             <div class="content">
-                <div class="container">
-                    <div class="title">general statistic</div>
-                    <div class="container-body">
-                        <form class="form" action="">
-                            <input class="form-field" type="text">
-                            <input class="form-field" type="text">
-                            <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
-                        </form>
+
+                <section id="general" class="page page-active">
+                    <div class="container">
+                        <div class="title">general statistic</div>
+                        <div class="container-body">
+                            <form class="form" action="">
+                                <input class="form-field" type="text">
+                                <input class="form-field" type="text">
+                                <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="title">links</div>
-                    <div class="container-body">
-                        <a href="#" class="btn">+ add new</i></a>
-                        <ul class="links-colection">
-                            <li>
-                                <p>Home page</p>
-                                <a href="#">http://www.homepage.com</a>
-                            </li>
-                            <li>
-                                <p>Currently offer</p>
-                                <a href="#">http://www.currently.com</a>
-                            </li>
-                            <li>
-                                <p>Blurpix</p>
-                                <a href="#">http://www.blurpix.com</a>
-                            </li>
-                            <li>
-                                <p>Your Site</p>
-                                <a href="#">http://www.yoursite.com</a>
-                            </li>
-                            <li>
-                                <p>Google</p>
-                                <a href="#">http://www.google.com</a>
-                            </li>
-                            <li>
-                                <p>Facebook</p>
-                                <a href="#">http://www.facebook.com</a>
-                            </li>
-                            <li>
-                                <p>Dashboard</p>
-                                <a href="#">http://www.dashboard.com</a>
-                            </li>
-                            <li>
-                                <p>Twitter</p>
-                                <a href="#">http://www.twitter.com</a>
-                            </li>
-                            <li>
-                                <p>Piece of Wind</p>
-                                <a href="#">http://www.pieceofwind.com</a>
-                            </li>
-                        </ul>
+                    <div class="container">
+                        <div class="title">links</div>
+                        <div class="container-body">
+                            <a href="#" class="btn">+ add new</a>
+                            <ul class="links-colection">
+                                <li>
+                                    <p>Home page</p>
+                                    <a href="#">http://www.homepage.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Currently offer</p>
+                                    <a href="#">http://www.currently.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Blurpix</p>
+                                    <a href="#">http://www.blurpix.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Your Site</p>
+                                    <a href="#">http://www.yoursite.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Google</p>
+                                    <a href="#">http://www.google.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Facebook</p>
+                                    <a href="#">http://www.facebook.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Dashboard</p>
+                                    <a href="#">http://www.dashboard.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Twitter</p>
+                                    <a href="#">http://www.twitter.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Piece of Wind</p>
+                                    <a href="#">http://www.pieceofwind.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </section>
+
+                <section id="details" class="page">
+                    <div class="container">
+                        <div class="title">details</div>
+                        <div class="container-body">
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <section id="links" class="page">
+                    <div class="container">
+                        <div class="title">links</div>
+                        <div class="container-body">
+                            <a href="#" class="btn">+ add new</a>
+                            <ul class="links-colection">
+                                <li>
+                                    <p>Home page</p>
+                                    <a href="#">http://www.homepage.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Currently offer</p>
+                                    <a href="#">http://www.currently.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Blurpix</p>
+                                    <a href="#">http://www.blurpix.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Your Site</p>
+                                    <a href="#">http://www.yoursite.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Google</p>
+                                    <a href="#">http://www.google.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Facebook</p>
+                                    <a href="#">http://www.facebook.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Dashboard</p>
+                                    <a href="#">http://www.dashboard.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Twitter</p>
+                                    <a href="#">http://www.twitter.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Piece of Wind</p>
+                                    <a href="#">http://www.pieceofwind.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="banners" class="page">
+                    <div class="container">
+                        <div class="title">banners</div>
+                        <div class="container-body">
+                            <a href="#" class="btn">+ add new</a>
+                            <ul class="links-colection">
+                                <li>
+                                    <p>Banner main</p>
+                                    <a href="#">http://www.website.com/bannermain.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Sign up banner</p>
+                                    <a href="#">http://www.website.com/signup.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Banner left side</p>
+                                    <a href="#">http://www.website.com/leftside.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Vertical banner</p>
+                                    <a href="#">http://www.website.com/vert.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Front banner</p>
+                                    <a href="#">http://www.website.com/front.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Horizontal banner</p>
+                                    <a href="#">http://www.website.com/horizontal.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn">+ add new</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="personaldata" class="page">
+                    <div class="container">
+                        <div class="title">presonal data</div>
+                        <div class="container-body">
+                            <form class="form-field-list" action="">
+                                <label>Name<input class="form-field" type="text"></label>
+                                <label>Surname<input class="form-field" type="text"></label>
+                                <label>E-mail<input class="form-field" type="email"></label>
+                                <label>Phone number<input class="form-field" type="phone"></label>
+                                <div class="hr"></div>
+                                <label>Skype<input class="form-field" type="text"></label>
+                                <label>ICQ<input class="form-field" type="text"></label>
+                                <label>Msn<input class="form-field" type="text"></label>
+                                <div class="hr"></div>
+                                <label>Wallet<input class="form-field" type="text"></label>
+                                <div class="hr"></div>
+                                <label>Password<input class="form-field" type="password"></label>
+                                <label>Repeat<input class="form-field" type="password"></label>
+                                <a href="#" class="btn">Save</a>  
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="payout" class="page">
+                    <div class="container">
+                        <div class="title">payout</div>
+                        <div class="container-body">
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <section id="postback" class="page">
+                    <div class="container">
+                        <div class="title">postback</div>
+                        <div class="container-body">
+                            
+                        </div>
+                    </div>
+                </section>
+
             </div>
+
         </div>
     </div>
 

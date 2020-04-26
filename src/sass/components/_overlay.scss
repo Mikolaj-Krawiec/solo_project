@@ -6,7 +6,11 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  z-index: 150;
+}
 
+.overlay-nav{
+  z-index: 100;
 }
 
 @media (max-width: 768px) {

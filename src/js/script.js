@@ -1,30 +1,92 @@
 /* eslint-disable linebreak-style */
-const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('nav');
-  const navLinks = document.querySelectorAll('.nav-links li');
-  const overlay = document.querySelector('.overlay');
+{
+  const initNavSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const navItems = document.querySelectorAll('.nav-items li');
+    const overlay = document.querySelector('.overlay-nav');
 
-  burger.addEventListener('click', () => {
-    //Toggle Nav
-    nav.classList.toggle('nav-active');
-    overlay.classList.toggle('overlay-active');
-    //Animate Links
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 15 + 0.1}s`;
-      }
+    burger.addEventListener('click', () => {
+      //Toggle Nav
+      nav.classList.toggle('nav-active');
+      overlay.classList.toggle('overlay-active');
+      //Animate Links
+      navItems.forEach((item, index) => {
+        if (item.style.animation) {
+          item.style.animation = '';
+        } else {
+          item.style.animation = `navLinkFade 0.5s ease forwards ${index / 15 +
+            0.1}s`;
+        }
+      });
+
+      //Burger Animation
+      burger.classList.toggle('toggle');
     });
+  };
 
-    //Burger Animation
-    burger.classList.toggle('toggle');
-  });
-};
+  const navLinks = document.querySelectorAll('.nav-link');
+  const pages = document.querySelectorAll('.page');
 
-const app = () => {
-  navSlide();
-};
+  const initPages = () => {
+    const idFromHash = window.location.hash.replace('#/','');
+    
 
-app();
+    let pageMatchingHash = pages[0].id;
+
+    for(let page of pages) {
+      if(page.id == idFromHash) {
+        pageMatchingHash = page.id;
+        break;
+      }
+    }
+
+    activatePage(pageMatchingHash);
+    
+    for (const link of navLinks) {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const id = event.currentTarget.getAttribute('href').replace('#','');
+        console.log(id);
+        activatePage(id);
+        window.location.hash = '#/' + id;
+      });
+    }
+  };
+
+  const activatePage = (pageId) => {
+    for(let page of pages) {
+      page.classList.toggle('page-active' , page.id == pageId);
+    }
+    for(let link of navLinks) {
+      link.classList.toggle('link-active', link.getAttribute('href') == '#' + pageId );
+    }
+  };
+
+  const initPopUps = () => {
+    const popUpTriggers = document.querySelectorAll('.pop-up-message');
+    const popUps = document.querySelectorAll('.pop-up');
+    const overlay = document.querySelector('.overlay');
+    
+    for(const button of popUpTriggers) {
+      console.log(button);
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        const id = event.currentTarget.getAttribute('href').replace('#','');
+        console.log(id);
+        for(const popUp of popUps) {
+          popUp.classList.toggle('active', popUp.id === id);
+        }
+        overlay.classList.toggle('active');
+      });  
+    }
+  };
+
+  const app = () => {
+    initPages();
+    initNavSlide();
+    initPopUps();
+  };
+
+  app();
+}

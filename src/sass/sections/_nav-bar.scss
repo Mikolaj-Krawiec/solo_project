@@ -19,7 +19,7 @@ nav {
     height: 100vh;
     width: 190px;
 
-    .nav-links {
+    .nav-items {
       margin: 0;
       display: flex;
       flex-direction: column;
@@ -44,7 +44,7 @@ nav {
         &:hover {
           background-color: $background-color-focus;
 
-          .nav-link {
+          .nav-item {
             color: $text-color-link-focus;
           }
 
@@ -89,7 +89,7 @@ nav {
         }
       }
 
-      .nav-link {
+      .nav-item {
         display: flex;
         align-items: center;
         height: 100%;
@@ -98,6 +98,10 @@ nav {
         color: $text-color-link;
         text-decoration: none;
         font-size: 0.9rem;
+      }
+
+      .link-active{
+        color: $text-color-link-focus;
       }
     }
 
@@ -193,7 +197,7 @@ nav {
     }
   }
 
-  nav .navbar .nav-links li{
+  nav .navbar .nav-items li{
     opacity: 0;
   }
 
