@@ -25,7 +25,7 @@
     });
   };
 
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.menu .nav-link');
   const pages = document.querySelectorAll('.page');
 
   const initPages = () => {
@@ -47,7 +47,6 @@
       link.addEventListener('click', (event) => {
         event.preventDefault();
         const id = event.currentTarget.getAttribute('href').replace('#','');
-        console.log(id);
         activatePage(id);
         window.location.hash = '#/' + id;
       });
@@ -66,20 +65,31 @@
   const initPopUps = () => {
     const popUpTriggers = document.querySelectorAll('.pop-up-message');
     const popUps = document.querySelectorAll('.pop-up');
+    const popUpsButtons = document.querySelectorAll('.pop-btn');
     const overlay = document.querySelector('.overlay');
     
+    for(const button of popUpsButtons) {
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        for(const popUp of popUps) {
+          popUp.classList.remove('active');
+        }
+        overlay.classList.remove('active');
+      });
+    }
+
     for(const button of popUpTriggers) {
-      console.log(button);
       button.addEventListener('click', event => {
         event.preventDefault();
         const id = event.currentTarget.getAttribute('href').replace('#','');
-        console.log(id);
         for(const popUp of popUps) {
           popUp.classList.toggle('active', popUp.id === id);
         }
         overlay.classList.toggle('active');
       });  
     }
+
+    
   };
 
   const app = () => {

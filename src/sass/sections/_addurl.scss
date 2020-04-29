@@ -1,0 +1,73 @@
+.addurl {
+  color: $text-color;
+  font-family: $text-font;
+
+  p {
+    margin: 0;
+    // margin: 20px 0 0 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  input, input::placeholder, select {
+    color: $text-color;
+    font-family: $text-font;
+    font-size: 0.9rem;
+    height: 30px;
+    padding: 0 5px;
+  }
+
+  .btn{
+    min-height: 30px;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+  }
+  
+  .checkbox-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    i{
+      opacity: 0;
+      font-size: 0.8rem;
+      margin-left: auto;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover{
+        color: $brand-main-color;
+      }
+    }
+
+    label{
+      font-size: 0.9rem;
+    }
+
+    &:hover{
+      background-color: $background-color;
+
+      i{
+        opacity: 1;
+      }
+    }
+  }
+
+
+  .scroll{
+    padding-top: 0;
+    overflow: scroll;
+    align-items: stretch;
+
+    &::-webkit-scrollbar {
+      display: block;
+    }
+  }
+
+  label p{
+    margin-bottom: 20px;
+  }
+}

@@ -4,6 +4,8 @@
 
 body {
   background-color: $background-color;
+  overflow: hidden;
+  max-width: 100vw;
 }
 
 *{
@@ -12,12 +14,15 @@ body {
 
 .layout{
   display: flex;
+  height: 100vh;
+  overflow-y: scroll;
+  // overflow-x: hidden;
+  max-width: 100%;
 
   .pages_topbar{
-    width: 100%;
+    flex: 1 0 0;
     display: flex;
     flex-direction: column;
-    // flex: 1 0 1 ;
 
     .content{
       width: 100%;
@@ -34,6 +39,38 @@ body {
     }
   }
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  max-height: 200px;
+}
+
+.row > * {
+  margin-right: 20px;
+  
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.column {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  // margin-right: 20px;
+
+  // &:last-of-type {
+  //   margin-right: 0;
+  // }
+}
+
 
 // @media (min-width: 1200px) {
 //   .container {

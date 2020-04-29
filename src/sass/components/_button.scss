@@ -13,9 +13,23 @@
   font-family: $text-font;
   font-weight: 300;
 
-  
+  margin-right: 20px;
+
+
   .icon{
     line-height: 0;
+  }
+
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
+
+.btn > *{
+  margin-right: 10px;
+
+  &:last-child{
+    margin-right: 0;
   }
 }
 

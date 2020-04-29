@@ -2,10 +2,10 @@
   display: none;
   z-index: 200;
   position: fixed;
-  top: 25%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 350px;
+  transform: translateX(-50%);
+  min-width: 350px;
   background-color: $background-color-container;
 
   .title {
@@ -14,13 +14,11 @@
   }
 
   .pop-up-body {
-    padding: 20px;
     display: flex;
     justify-content: flex-end;
 
     .btn {
-      width: 100px;
-      margin-left: 20px;
+      min-width: 120px;
     }
   }
 }
