@@ -36,6 +36,10 @@
   background-color: transparent;
   border-radius: 3px;
   border: 1px solid $background-color2;
+
+  &:invalid{
+    outline-color: $color-error;
+  }
 }
 
 .form-checkbox{
@@ -48,16 +52,14 @@
   padding-left: 35px;
 }
 
-/* Hide the browser's default checkbox */
-.form-checkbox input {
+.form-checkbox input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 16px;
+  width: 16px;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 50%;
@@ -72,12 +74,10 @@ input[type="checkbox"]:checked ~ .checkmark{
   background-color: $brand-main-color;
 }
 
-/* Show the checkmark when checked */
 input[type="checkbox"]:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .form-checkbox .checkmark:after {
   content: "";
   position: absolute;
@@ -91,4 +91,16 @@ input[type="checkbox"]:checked ~ .checkmark:after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  display: block;
+  background-image: url(https://image.flaticon.com/icons/png/128/118/118738.png);
+  background-size: 15px auto;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
 }

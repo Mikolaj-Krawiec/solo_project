@@ -58,6 +58,7 @@
 
 
   .scroll{
+    flex-wrap: wrap;
     padding-top: 0;
     overflow: scroll;
     align-items: stretch;
@@ -70,4 +71,8 @@
   label p{
     margin-bottom: 20px;
   }
+}
+
+.checkbox-item{
+  flex: 1 0 25%;
 }

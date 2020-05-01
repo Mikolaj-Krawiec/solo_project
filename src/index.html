@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
 </head>
 <body>
+
     <div id="quit" class="pop-up">
         <div class="title">Do you really want to Quit?</div>
         <div class="pop-up-body row">
@@ -19,7 +20,7 @@
     <div id="add-link" class="pop-up active">
         <div class="title">Add URL</div>
         <div class="pop-up-body">
-            <form class="addurl" action="">
+            <form class="addurl" action="POST">
                 <div class="row">
                     <label class="column"><p>Scheme name</p><input placeholder="Name" class="form-field" type="text"></label>
                     <label class="column">
@@ -42,210 +43,204 @@
                 <div class="hr"></div>
                 <p class="row">Select websites</p>
                 <div class="row scroll">
-                    <div class="column">
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <div class="checkmark"></div>
-                                Landing page Money
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP your choise
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP Wallet
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                E-Shop 01
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Toy Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Book Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Charity
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP Icons Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Template Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Random Text
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <div class="checkmark"></div>
+                            Landing page Money
+                        </label>
+                        <i class="icon-show"></i> 
                     </div>
-                    <div class="column">
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <div class="checkmark"></div>
-                                Mobile app
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP Senatoe free signals
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP DE Your chise
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Invest wisely
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Toy Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Book Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Senator Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP your choise
+                        </label>
+                        <i class="icon-show"></i> 
                     </div>
-                    <div class="column">
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <div class="checkmark"></div>
-                                Landing page Money
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP your choise
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                LP Wallet
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                E-Shop 01
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Toy Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Book Store
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
-                        <div class="checkbox-item">
-                            <label class="form-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Charity
-                            </label>
-                            <i class="icon-show"></i> 
-                        </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Wallet
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            E-Shop 01
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Toy Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Book Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Charity
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Icons Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Template Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Random Text
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <div class="checkmark"></div>
+                            Mobile app
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Senatoe free signals
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP DE Your chise
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Invest wisely
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Toy Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Book Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Senator Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <div class="checkmark"></div>
+                            Landing page Money
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP your choise
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Wallet
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            E-Shop 01
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Toy Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Book Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Charity
+                        </label>
+                        <i class="icon-show"></i> 
                     </div>
                 </div>
                 <div class="hr"></div>
                 <div class="row">
                     <input placeholder="Generated link" class=" form-field" type="text">
                     <a href="#" class="btn btn-gray pop-btn"><i class="icon icon-links"></i> <div>Copy link</div></a>
-                    <a href="#" class="btn pop-btn">Save</a>
+                    <a href="#" type="submit" class="btn pop-btn">Save</a>
                 </div>
             </form>
         </div>
