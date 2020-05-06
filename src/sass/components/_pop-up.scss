@@ -1,21 +1,26 @@
 .pop-up {
   display: none;
+  flex-direction: column;
   z-index: 200;
   position: fixed;
   top: 20%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   min-width: 350px;
   background-color: $background-color-container;
 
   .title {
     text-transform: none;
     font-size: 0.9rem;
+
+    i{
+      color: $text-color;
+      font-size: 12px;
+    }
   }
 
   .pop-up-body {
     display: flex;
-    justify-content: flex-end;
 
     .btn {
       min-width: 120px;
@@ -24,5 +29,9 @@
 }
 
 .active{
-  display: block;
+  display: flex;
+}
+
+#quit .row{
+  justify-content: flex-end;
 }

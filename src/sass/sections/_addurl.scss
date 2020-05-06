@@ -1,15 +1,18 @@
 .addurl {
+  overflow: auto;
+  min-width: 650px;
   color: $text-color;
   font-family: $text-font;
 
   p {
     margin: 0;
-    // margin: 20px 0 0 0;
     font-size: 0.85rem;
     font-weight: bold;
   }
 
-  input, input::placeholder, select {
+  input,
+  input::placeholder,
+  select {
     color: $text-color;
     font-family: $text-font;
     font-size: 0.9rem;
@@ -17,7 +20,7 @@
     padding: 0 5px;
   }
 
-  .btn{
+  .btn {
     min-height: 30px;
   }
 
@@ -25,54 +28,96 @@
   select {
     width: 100%;
   }
-  
-  .checkbox-item{
+
+  .checkbox-item {
     display: flex;
     align-items: center;
     width: 100%;
 
-    i{
+    i {
       opacity: 0;
       font-size: 0.8rem;
       margin-left: auto;
       padding: 5px;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         color: $brand-main-color;
       }
     }
 
-    label{
+    label {
       font-size: 0.9rem;
     }
 
-    &:hover{
+    &:hover {
       background-color: $background-color;
 
-      i{
+      i {
         opacity: 1;
       }
     }
   }
 
-
-  .scroll{
-    flex-wrap: wrap;
-    padding-top: 0;
-    overflow: scroll;
-    align-items: stretch;
-
-    &::-webkit-scrollbar {
-      display: block;
-    }
+  .buttons {
+    display: flex;
+    flex-direction: row;
   }
 
-  label p{
+  label p {
     margin-bottom: 20px;
   }
 }
 
-.checkbox-item{
-  flex: 1 0 25%;
+.checkbox-list {
+  flex-wrap: wrap;
+}
+
+.checkbox-item {
+  flex: 1 0 30%;
+}
+
+@media (max-width: 576px) {
+  .addurl {
+    top: 0;
+    min-width: 100vw;
+    height: 100vh;
+
+    .row {
+      flex-direction: column;
+    }
+
+    .row > * {
+      margin-right: 0;
+    }
+
+    #select-compain {
+      margin: 20px 0;
+    }
+
+    .checkbox-item {
+      flex: 1 0 50%;
+    }
+
+    .btn {
+      align-self: center;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .checkbox-item {
+    flex: 1 0 100%;
+  }
+}
+
+@media (max-height: 700px) {
+  .addurl {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

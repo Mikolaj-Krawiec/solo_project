@@ -12,9 +12,7 @@
   text-decoration: none;
   font-family: $text-font;
   font-weight: 300;
-
   margin-right: 20px;
-
 
   .icon{
     line-height: 0;
@@ -35,4 +33,14 @@
 
 .btn-gray{
   background-color: $text-color;
+}
+
+.btn-online{
+  background-color: rgb(4, 174, 0);
+  min-height: 0;
+  min-width: 0 !important;
+  width: 40px;
+  font-size: 10px;
+  margin-top: 3px;
+  margin-bottom: 0;
 }

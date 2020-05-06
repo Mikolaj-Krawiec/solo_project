@@ -7,7 +7,7 @@
   align-items: center;
 
   label {
-    width: 400px;
+    min-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,4 +103,16 @@ select {
   background-size: 15px auto;
   background-repeat: no-repeat;
   background-position: right 5px center;
+}
+
+@media (max-width: 576px) {
+  .form-field-list label {
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 0;
+    
+    input{
+      margin-top: 10px;
+    }
+  }
 }

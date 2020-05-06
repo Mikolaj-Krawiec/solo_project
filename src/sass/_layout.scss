@@ -1,39 +1,40 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   background-color: $background-color;
   overflow: hidden;
   max-width: 100vw;
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-*{
+
+* {
   box-sizing: border-box;
 }
 
-.layout{
+.layout {
   display: flex;
   height: 100vh;
   overflow-y: scroll;
   // overflow-x: hidden;
   max-width: 100%;
 
-  .pages_topbar{
+  .pages_topbar {
     flex: 1 0 0;
     display: flex;
     flex-direction: column;
 
-    .content{
+    .content {
       width: 100%;
       display: flex;
       flex-direction: column;
 
-      .page{
+      .page {
         display: none;
       }
 
-      .page-active{
+      .page-active {
         display: block;
       }
     }
@@ -41,18 +42,18 @@ body {
 }
 
 .row {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px;
-  max-height: 200px;
 }
 
 .row > * {
   margin-right: 20px;
-  
-  &:last-child{
+
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -62,10 +63,8 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
 }
-
 
 // @media (min-width: 1200px) {
 //   .container {

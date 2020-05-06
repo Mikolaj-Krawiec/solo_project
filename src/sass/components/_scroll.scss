@@ -1,0 +1,20 @@
+.scroll {
+  max-height: 250px;
+  padding: 20px;
+  display: flex;
+  padding-top: 0;
+  overflow: auto;
+  align-items: stretch;
+}
+
+.scroll::-webkit-scrollbar {
+  display: block;
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

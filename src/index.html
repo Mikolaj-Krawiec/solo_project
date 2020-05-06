@@ -9,22 +9,52 @@
 </head>
 <body>
 
+    <div id="chat" class="pop-up chat">
+        <div class="title"><p>
+            ONLINE CHAT WITH YOUR PERSONAL MANAGER
+        </p>
+            <a href="#" class="js-pop-up-close">
+                <i class="icon-close icon"></i>
+            </a>
+        </div>
+        <div class="pop-up-body column">
+            <div class="manager-info">
+                <img src="./images/avatar/person_1.png" alt="">
+                <div class="column">
+                    Mikhael E.
+                    <p class="btn btn-online">online</p>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div id="chat-box" class="messages scroll">
+                <div class="message answer">
+                    Hello. Can I help you?
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="row">
+                <input id="chat-input" class="form-field" type="text">
+                <a  href="#" id="chat-send" class="btn">Send</a>
+            </div>
+        </div>
+    </div>
+    
     <div id="quit" class="pop-up">
         <div class="title">Do you really want to Quit?</div>
         <div class="pop-up-body row">
-            <a href="#" class="btn btn-gray pop-btn">Cancel</a>
-            <a href="#" class="btn pop-btn">Quit</a>
+            <a href="#" class="btn btn-gray js-pop-up-close">Cancel</a>
+            <a href="#" class="btn js-pop-up-close">Quit</a>
         </div>
     </div>
 
-    <div id="add-link" class="pop-up active">
+    <div id="add-link" class="pop-up addurl">
         <div class="title">Add URL</div>
         <div class="pop-up-body">
-            <form class="addurl" action="POST">
+            <form action="POST">
                 <div class="row">
                     <label class="column"><p>Scheme name</p><input placeholder="Name" class="form-field" type="text"></label>
                     <label class="column">
-                        <select class=" form-field">
+                        <select id="select-compain" class="form-field">
                             <option disabled selected hidden>Select compain</option>
                             <option value="1">Volvo</option>
                             <option value="2">Saab</option>
@@ -42,7 +72,7 @@
                 </div>
                 <div class="hr"></div>
                 <p class="row">Select websites</p>
-                <div class="row scroll">
+                <div class="scroll checkbox-list">
                     <div class="checkbox-item">
                         <label class="form-checkbox">
                             <input type="checkbox">
@@ -239,19 +269,22 @@
                 <div class="hr"></div>
                 <div class="row">
                     <input placeholder="Generated link" class=" form-field" type="text">
-                    <a href="#" class="btn btn-gray pop-btn"><i class="icon icon-links"></i> <div>Copy link</div></a>
-                    <a href="#" type="submit" class="btn pop-btn">Save</a>
+                    <div class="buttons"> 
+                        <a href="#" class="btn btn-gray js-pop-up-close"><i class="icon icon-links"></i> <div>Copy link</div></a>
+                        <a href="#" type="submit" class="btn js-pop-up-close">Save</a>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <div class="overlay active"></div>
+    <div id="overlay" class="overlay"></div>
     <div class="overlay overlay-nav"></div>
 
     <div class="layout">
 
         <div class="nav-background"></div>
+
         <nav>
             <div class="navbar">
                 <div class="logo">
@@ -305,14 +338,14 @@
                 <ul class="nav-items">
                     
                     <div class="manager nav-item">YOUR MANAGER</div>
-    
-                    <li class="person">   
-                    <a class="nav-item" herf="#">
-                        <div class="avatar">
-                            <img src="./images/avatar/person_1.png" alt="">
-                        </div>
-                        Mikhael E.
-                    </a>
+
+                    <li class="person">
+                        <a href="#chat" class="nav-item js-pop-up-open">
+                            <div class="avatar">
+                                <img src="./images/avatar/person_1.png" alt="">
+                            </div>
+                            Mikhael E.
+                        </a>
                     </li>
                 </ul>
 
@@ -344,7 +377,7 @@
                             </a>
                         </li>
                         <li class="top-link">
-                            <a class="nav-item nav-link pop-up-message" href="#quit"><i class="icon-quit"></i></a> 
+                            <a class="nav-item nav-link js-pop-up-open" href="#quit"><i class="icon-quit"></i></a> 
                         </li>
                     </ul>
                 </div>
@@ -373,7 +406,7 @@
                         </div>
                     </li>
                     <li class="top-link">
-                        <a class="pop-up-message" href="#quit"><i class="icon-quit"></i></a> 
+                        <a href="#quit" class="js-pop-up-open"><i class="icon-quit"></i></a> 
                     </li>
                 </ul>
             </div>
@@ -389,86 +422,7 @@
                                 <input class="form-field" type="text">
                                 <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
                             </form>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="title">links</div>
-                        <div class="container-body">
-                            <a href="#" class="btn">+ add new</a>
-                            <ul class="links-colection">
-                                <li>
-                                    <p>Home page</p>
-                                    <a href="#">http://www.homepage.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Currently offer</p>
-                                    <a href="#">http://www.currently.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Blurpix</p>
-                                    <a href="#">http://www.blurpix.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Your Site</p>
-                                    <a href="#">http://www.yoursite.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Google</p>
-                                    <a href="#">http://www.google.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Facebook</p>
-                                    <a href="#">http://www.facebook.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Dashboard</p>
-                                    <a href="#">http://www.dashboard.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Twitter</p>
-                                    <a href="#">http://www.twitter.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <p>Piece of Wind</p>
-                                    <a href="#">http://www.pieceofwind.com</a>
-                                    <div class="icon">
-                                        <i class="icon icon-links"></i>
-                                        <i class="icon icon-trash"></i>
-                                    </div>
-                                </li>
-                            </ul>
+                            <canvas id="myChart"></canvas>
                         </div>
                     </div>
                 </section>
@@ -486,7 +440,7 @@
                     <div class="container">
                         <div class="title">links</div>
                         <div class="container-body">
-                            <a href="#" class="btn">+ add new</a>
+                            <a href="#add-link" class="btn js-pop-up-open">+ add new</a>
                             <ul class="links-colection">
                                 <li>
                                     <p>Home page</p>
@@ -672,6 +626,7 @@
         </div>
     </div>
 
-<script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

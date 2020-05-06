@@ -5,6 +5,7 @@
 }
 
 nav {
+  overflow: auto;
   position: fixed;
   background-color: $background-color-menu;
   z-index: 100;
@@ -14,10 +15,10 @@ nav {
     top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     color: $text-color-light;
     font-family: $text-font;
-    min-height: 100vh;
+    height: 100vh;
     width: 190px;
 
     .nav-items {
