@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+    <div id="chat" class="pop-up chat">
+        <div class="title"><p>
+            ONLINE CHAT WITH YOUR PERSONAL MANAGER
+        </p>
+            <a href="#" class="js-pop-up-close">
+                <i class="icon-close icon"></i>
+            </a>
+        </div>
+        <div class="pop-up-body column">
+            <div class="manager-info">
+                <img src="./images/avatar/person_1.png" alt="">
+                <div class="column">
+                    Mikhael E.
+                    <p class="btn btn-online">online</p>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div id="chat-box" class="messages scroll">
+                <div class="message answer">
+                    Hello. Can I help you?
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="row">
+                <input id="chat-input" class="form-field" type="text">
+                <a  href="#" id="chat-send" class="btn">Send</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="quit" class="pop-up">
+        <div class="title">Do you really want to Quit?</div>
+        <div class="pop-up-body row">
+            <a href="#" class="btn btn-gray js-pop-up-close">Cancel</a>
+            <a href="#" class="btn js-pop-up-close">Quit</a>
+        </div>
+    </div>
+
+    <div id="add-link" class="pop-up addurl">
+        <div class="title">Add URL</div>
+        <div class="pop-up-body">
+            <form action="POST">
+                <div class="row">
+                    <label class="column"><p>Scheme name</p><input placeholder="Name" class="form-field" type="text"></label>
+                    <label class="column">
+                        <select id="select-compain" class="form-field">
+                            <option disabled selected hidden>Select compain</option>
+                            <option value="1">Volvo</option>
+                            <option value="2">Saab</option>
+                            <option value="3">Fiat</option>
+                            <option value="4">Audi</option>
+                        </select>
+                    </label>
+                    <label class="column"><p>Language</p>
+                        <select class="form-field">
+                        <option value="1">EN</option>
+                        <option value="2">PL</option>
+                        <option value="3">FR</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="hr"></div>
+                <p class="row">Select websites</p>
+                <div class="scroll checkbox-list">
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <div class="checkmark"></div>
+                            Landing page Money
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP your choise
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Wallet
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            E-Shop 01
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Toy Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Book Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Charity
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Icons Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Template Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Random Text
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <div class="checkmark"></div>
+                            Mobile app
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Senatoe free signals
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP DE Your chise
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Invest wisely
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Toy Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Book Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Senator Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <div class="checkmark"></div>
+                            Landing page Money
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP your choise
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            LP Wallet
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            E-Shop 01
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Toy Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Book Store
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                    <div class="checkbox-item">
+                        <label class="form-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Charity
+                        </label>
+                        <i class="icon-show"></i> 
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="row">
+                    <input placeholder="Generated link" class=" form-field" type="text">
+                    <div class="buttons"> 
+                        <a href="#" class="btn btn-gray js-pop-up-close"><i class="icon icon-links"></i> <div>Copy link</div></a>
+                        <a href="#" type="submit" class="btn js-pop-up-close">Save</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div class="overlay overlay-nav"></div>
+
+    <div class="layout">
+
+        <div class="nav-background"></div>
+
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <h4>Just do it</h4>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+                <ul class="nav-items">
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#general">
+                            <i class="icon-general icon"></i> 
+                        General</a>
+                    </li>
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#details">
+                            <i class="icon-details icon"></i> 
+                        Details</a>
+                    </li>
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#links">
+                            <i class="icon-links icon"></i> 
+                        Links</a>
+                    </li>
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#banners">
+                            <i class="icon-banners icon"></i> 
+                        Banners</a>
+                    </li>
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#personaldata">
+                            <i class="icon-personaldata icon"></i> 
+                        Personal data</a>
+                    </li>
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#payout">
+                            <i class="icon-payout icon"></i> 
+                        Payout</a>
+                    </li>
+                    <li class="menu">
+                        <a class="nav-item nav-link" href="#postback">
+                            <i class="icon-postback icon"></i> 
+                        Postback</a>
+                    </li>
+                </ul>
+
+                <div class="hr"></div>
+    
+                <ul class="nav-items">
+                    
+                    <div class="manager nav-item">YOUR MANAGER</div>
+
+                    <li class="person">
+                        <a href="#chat" class="nav-item js-pop-up-open">
+                            <div class="avatar">
+                                <img src="./images/avatar/person_1.png" alt="">
+                            </div>
+                            Mikhael E.
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="top-bar-rwd">
+                    <div class="hr"></div>
+    
+                    <ul class="nav-items">
+                        <li class="top-link">
+                            <a href="#" class="nav-item nav-link ">
+                                <i class="icon-wallet"></i>
+                                <div class="balance">
+                                    $1,500.00
+                                </div>
+                                <i class="icon-arrow-down"></i>  
+                            </a>
+                        </li>
+                        <li class="top-link">
+                            <a href="#" class="nav-item nav-link ">
+                                <i class="icon-notification"></i> 
+                            </a>
+                        </li>
+                        <li class="top-link">
+                            <a href="#" class="nav-item nav-link ">
+                                <i class="icon-profile"></i> 
+                                <div>
+                                    Leonardo Dicaprio
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-link">
+                            <a class="nav-item nav-link js-pop-up-open" href="#quit"><i class="icon-quit"></i></a> 
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="pages_topbar">
+
+            <div class="top-bar">
+                <ul class="top-links">
+                    <li class="top-link">
+                        <i class="icon-wallet"></i>
+                        <div class="balance">
+                            $1,500.00
+                        </div>
+                        <i class="icon-arrow-down"></i>  
+                    </li>
+                    <li class="top-link">
+                        <i class="icon-notification"></i> 
+                    </li>
+                    <li class="top-link">
+                        <i class="icon-profile"></i> 
+                        <div>
+                            Leonardo Dicaprio
+                        </div>
+                    </li>
+                    <li class="top-link">
+                        <a href="#quit" class="js-pop-up-open"><i class="icon-quit"></i></a> 
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+
+                <section id="general" class="general page page-active">
+                    <div class="container">
+                        <div class="title">GENERAL STATISTIC</div>
+                        <div class="container-body">
+                            <form class="form row max-width date-picker" action="">
+                                <div id="dates" class="dates form-field">
+                                    <input placeholder="from date" id="date-picker-1" class="form-field" type="text">
+                                    <div class="row">
+                                        <input placeholder="to date" id="date-picker-2" class="form-field" type="text">
+                                        <i class="icon icon-details"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
+                            </form>
+                            <div class="hr"></div>
+                            <div class="row max-width">
+                                <div class="column">
+                                    <div class="title">
+                                        <p>Visit Singnups</p>    
+                                        <p>124</p>
+                                    </div>
+                                    <div class="title">
+                                        <p>FTD</p>    
+                                        <p>445</p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="title">
+                                        <p>Net deposit</p>    
+                                        <p>564</p>
+                                    </div>
+                                    <div class="title">
+                                        <p>Turn over</p>    
+                                        <p>432</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row max-width">Earnings chart</div>
+                            <canvas id="myChart" class="max-width"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="details" class="page">
+                    <div class="container">
+                        <div class="title">DETAILS STATISTIC</div>
+                        <div class="container-body">
+                            <form class="form row max-width date-picker" action="">
+                                <div id="dates" class="dates form-field">
+                                    <input placeholder="from date" id="date-picker-1" class="form-field" type="text">
+                                    <div class="row">
+                                        <input placeholder="to date" id="date-picker-2" class="form-field" type="text">
+                                        <i class="icon icon-details"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
+                            </form>
+                            <div class="hr"></div>
+                            <div class="scroll">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">Tracker name</th>
+                                        <th scope="col">Initialed date</th>
+                                        <th scope="col">Visit</th>
+                                        <th scope="col">Unique</th>
+                                        <th scope="col">Signups</th>
+                                        <th scope="col">FTD</th>
+                                        <th scope="col">Depositors</th>
+                                        <th scope="col">Deposits($)</th>
+                                        <th scope="col">Payout($)</th>
+                                        <th scope="col">Turnover</th>
+                                        <th scope="col">Deal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+    
+                                    </tbody>
+                                    </table> 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="links" class="page">
+                    <div class="container">
+                        <div class="title">LINKS</div>
+                        <div class="container-body">
+                            <a href="#add-link" class="btn js-pop-up-open">+ add new</a>
+                            <ul class="links-colection">
+                                <li>
+                                    <p>Home page</p>
+                                    <a href="#">http://www.homepage.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Currently offer</p>
+                                    <a href="#">http://www.currently.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Blurpix</p>
+                                    <a href="#">http://www.blurpix.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Your Site</p>
+                                    <a href="#">http://www.yoursite.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Google</p>
+                                    <a href="#">http://www.google.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Facebook</p>
+                                    <a href="#">http://www.facebook.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Dashboard</p>
+                                    <a href="#">http://www.dashboard.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Twitter</p>
+                                    <a href="#">http://www.twitter.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Piece of Wind</p>
+                                    <a href="#">http://www.pieceofwind.com</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="banners" class="page">
+                    <div class="container">
+                        <div class="title">BANNERS</div>
+                        <div class="container-body">
+                            <div><a href="#" class="btn">+ add new</a></div>
+                            <ul class="links-colection">
+                                <li>
+                                    <p>Banner main</p>
+                                    <a href="#">http://www.website.com/bannermain.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Sign up banner</p>
+                                    <a href="#">http://www.website.com/signup.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Banner left side</p>
+                                    <a href="#">http://www.website.com/leftside.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Vertical banner</p>
+                                    <a href="#">http://www.website.com/vert.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Front banner</p>
+                                    <a href="#">http://www.website.com/front.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Horizontal banner</p>
+                                    <a href="#">http://www.website.com/horizontal.gif</a>
+                                    <div class="icon">
+                                        <i class="icon icon-links"></i>
+                                        <i class="icon icon-trash"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn">+ add new</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="personaldata" class="page">
+                    <div class="container">
+                        <div class="title">PERSONAL DATA</div>
+                        <div class="container-body">
+                            <form class="form-field-list" action="">
+                                <label>Name<input class="form-field" type="text"></label>
+                                <label>Surname<input class="form-field" type="text"></label>
+                                <label>E-mail<input class="form-field" type="email"></label>
+                                <label>Phone number<input class="form-field" type="phone"></label>
+                                <div class="hr"></div>
+                                <label>Skype<input class="form-field" type="text"></label>
+                                <label>ICQ<input class="form-field" type="text"></label>
+                                <label>Msn<input class="form-field" type="text"></label>
+                                <div class="hr"></div>
+                                <label>Wallet<input class="form-field" type="text"></label>
+                                <div class="hr"></div>
+                                <label>Password<input class="form-field" type="password"></label>
+                                <label>Repeat<input class="form-field" type="password"></label>
+                                <a href="#" class="btn">Save</a>  
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="payout" class="page">
+                    <div class="container">
+                        <div class="title">PAYOUT</div>
+                        <div class="container-body">
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <section id="postback" class="page">
+                    <div class="container">
+                        <div class="title">POSTBACK</div>
+                        <div class="container-body">
+                            
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
