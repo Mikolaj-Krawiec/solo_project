@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./vendor/icons/css/Glyphter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
@@ -413,32 +414,145 @@
 
             <div class="content">
 
-                <section id="general" class="page page-active">
+                <section id="general" class="general page page-active">
                     <div class="container">
-                        <div class="title">general statistic</div>
+                        <div class="title">GENERAL STATISTIC</div>
                         <div class="container-body">
-                            <form class="form row " action="">
-                                <input class="form-field" type="text">
-                                <input class="form-field" type="text">
+                            <form class="form row max-width date-picker" action="">
+                                <div id="dates" class="dates form-field">
+                                    <input placeholder="from date" id="date-picker-1" class="form-field" type="text">
+                                    <div class="row">
+                                        <input placeholder="to date" id="date-picker-2" class="form-field" type="text">
+                                        <i class="icon icon-details"></i>
+                                    </div>
+                                </div>
                                 <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
                             </form>
-                            <canvas id="myChart"></canvas>
+                            <div class="hr"></div>
+                            <div class="row max-width">
+                                <div class="column">
+                                    <div class="title">
+                                        <p>Visit Singnups</p>    
+                                        <p>124</p>
+                                    </div>
+                                    <div class="title">
+                                        <p>FTD</p>    
+                                        <p>445</p>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="title">
+                                        <p>Net deposit</p>    
+                                        <p>564</p>
+                                    </div>
+                                    <div class="title">
+                                        <p>Turn over</p>    
+                                        <p>432</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row max-width">Earnings chart</div>
+                            <canvas id="myChart" class="max-width"></canvas>
                         </div>
                     </div>
                 </section>
 
                 <section id="details" class="page">
                     <div class="container">
-                        <div class="title">details</div>
+                        <div class="title">DETAILS STATISTIC</div>
                         <div class="container-body">
-                            
+                            <form class="form row max-width date-picker" action="">
+                                <div id="dates" class="dates form-field">
+                                    <input placeholder="from date" id="date-picker-1" class="form-field" type="text">
+                                    <div class="row">
+                                        <input placeholder="to date" id="date-picker-2" class="form-field" type="text">
+                                        <i class="icon icon-details"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn"><i class="icon icon-refresh"></i></a>
+                            </form>
+                            <div class="hr"></div>
+                            <div class="scroll">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">Tracker name</th>
+                                        <th scope="col">Initialed date</th>
+                                        <th scope="col">Visit</th>
+                                        <th scope="col">Unique</th>
+                                        <th scope="col">Signups</th>
+                                        <th scope="col">FTD</th>
+                                        <th scope="col">Depositors</th>
+                                        <th scope="col">Deposits($)</th>
+                                        <th scope="col">Payout($)</th>
+                                        <th scope="col">Turnover</th>
+                                        <th scope="col">Deal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>aff/sam_test</td>
+                                        <td>17/04/05 (12:45)</td>
+                                        <td>235</td>
+                                        <td>448</td>
+                                        <td>84</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>34,485.00</td>
+                                        <td>485.00</td>
+                                        <td>45.00</td>
+                                        <td>cpl(200)</td>
+                                        </tr>
+    
+                                    </tbody>
+                                    </table> 
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <section id="links" class="page">
                     <div class="container">
-                        <div class="title">links</div>
+                        <div class="title">LINKS</div>
                         <div class="container-body">
                             <a href="#add-link" class="btn js-pop-up-open">+ add new</a>
                             <ul class="links-colection">
@@ -521,7 +635,7 @@
 
                 <section id="banners" class="page">
                     <div class="container">
-                        <div class="title">banners</div>
+                        <div class="title">BANNERS</div>
                         <div class="container-body">
                             <div><a href="#" class="btn">+ add new</a></div>
                             <ul class="links-colection">
@@ -581,7 +695,7 @@
 
                 <section id="personaldata" class="page">
                     <div class="container">
-                        <div class="title">presonal data</div>
+                        <div class="title">PERSONAL DATA</div>
                         <div class="container-body">
                             <form class="form-field-list" action="">
                                 <label>Name<input class="form-field" type="text"></label>
@@ -605,7 +719,7 @@
 
                 <section id="payout" class="page">
                     <div class="container">
-                        <div class="title">payout</div>
+                        <div class="title">PAYOUT</div>
                         <div class="container-body">
                             
                         </div>
@@ -614,7 +728,7 @@
 
                 <section id="postback" class="page">
                     <div class="container">
-                        <div class="title">postback</div>
+                        <div class="title">POSTBACK</div>
                         <div class="container-body">
                             
                         </div>
@@ -627,6 +741,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

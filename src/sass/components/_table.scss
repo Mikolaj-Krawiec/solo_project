@@ -1,0 +1,20 @@
+.table {
+  table-layout: fixed;
+  overflow: auto;
+  border-collapse: collapse;
+  text-align: left;
+
+  tr {
+    position: relative;
+    height: 60px;
+    border-bottom: 1px solid $background-color2;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  td {
+    min-width: 100px;
+  }
+}

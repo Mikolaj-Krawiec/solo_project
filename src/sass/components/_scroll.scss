@@ -1,5 +1,4 @@
 .scroll {
-  max-height: 250px;
   padding: 20px;
   display: flex;
   padding-top: 0;
@@ -11,6 +10,7 @@
   display: block;
   -webkit-appearance: none;
   width: 7px;
+  height: 7px;
 }
 
 .scroll::-webkit-scrollbar-thumb {

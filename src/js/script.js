@@ -1,5 +1,8 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
+/* global flatpickr */ 
+
+// import flatpickr from 'flatpickr';
 
 {
   const initNavSlide = () => {
@@ -160,11 +163,17 @@
     });
   };
 
+  const initDatePicker = () => {
+    const datePicker_1 = flatpickr('#date-picker-1');
+    const datePicker_2 = flatpickr('#date-picker-2');
+  };
+
   const app = () => {
     initPages();
     initNavSlide();
     initPopUps();
     initChart();
+    initDatePicker();
   };
 
   app();

@@ -1,0 +1,37 @@
+#details {
+  .scroll {
+    width: 1200px;
+    overflow-y: hidden;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1440px){
+  #details .scroll {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1024px){
+  #details .scroll {
+    width: 500px;
+  }
+}
+
+@media (max-width: 630px){
+  #details .scroll {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px){
+  #details .scroll {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px){
+  #details .scroll {
+    width: 250px;
+  }
+}

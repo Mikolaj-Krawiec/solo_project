@@ -14,16 +14,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
     margin: 0 auto;
+    max-width: 100%;
   }
 
   .container-body > * {
-    margin-bottom: 25px;
+    margin-top: 25px;
 
-    &:first-child {
-      margin-top: 25px;
+    &:last-child {
+      margin-bottom: 25px;
     }
+
   }
 }
 

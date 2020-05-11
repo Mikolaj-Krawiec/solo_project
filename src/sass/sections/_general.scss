@@ -1,3 +1,11 @@
 .general {
-  max-width: 800px;
+  .container-body {
+    .title {
+      padding: 10px 0;
+    }
+  }
+
+  #myChart{
+    width: 100% !important;
+  }
 }

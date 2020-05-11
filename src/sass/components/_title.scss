@@ -1,6 +1,7 @@
 .title {
+  width: 100%;
   display: flex;
-  text-transform: uppercase;
+  justify-content: space-between;
   color: $text-color;
   font-family: $header-font;
   font-weight: bold;

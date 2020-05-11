@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   input {
     color: $text-color;
   }
@@ -31,18 +31,24 @@
 }
 
 .form-field {
+  color: $text-color;
   outline-color: $brand-main-color;
   padding: 10px;
   background-color: transparent;
   border-radius: 3px;
   border: 1px solid $background-color2;
 
-  &:invalid{
+  &:invalid {
     outline-color: $color-error;
+  }
+
+  &::placeholder {
+    color: $text-color;
+    font-family: $text-font;
   }
 }
 
-.form-checkbox{
+.form-checkbox {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -70,7 +76,7 @@
   background-color: #eee;
 }
 
-input[type="checkbox"]:checked ~ .checkmark{
+input[type="checkbox"]:checked ~ .checkmark {
   background-color: $brand-main-color;
 }
 
@@ -110,8 +116,8 @@ select {
     align-items: flex-start;
     flex-direction: column;
     min-width: 0;
-    
-    input{
+
+    input {
       margin-top: 10px;
     }
   }

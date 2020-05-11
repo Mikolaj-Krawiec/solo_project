@@ -4,6 +4,10 @@
   color: $text-color;
   font-family: $text-font;
 
+  .scroll{
+    max-height: 250px;
+  }
+
   p {
     margin: 0;
     font-size: 0.85rem;

@@ -1,0 +1,78 @@
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dates {
+    position: relative;
+    display: flex;
+    padding: 0;
+
+    .row {
+      padding: 0;
+      align-items: center;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 75%;
+      width: 1px;
+      background-color: $background-color2;
+    }
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      cursor: pointer;
+
+      &:hover {
+        color: $brand-main-color;
+      }
+    }
+
+    input {
+      width: 150px;
+      border: none;
+      outline: none;
+      margin-right: 0;
+    }
+  }
+
+  .dates > input {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .date-picker {
+    flex-direction: column;
+
+    a {
+      margin-top: 20px;
+      width: 230px;
+    }
+
+    .dates {
+      width: 230px;
+      margin: 0;
+      flex-direction: column;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 90%;
+        background-color: $background-color2;
+      }
+    }
+  }
+}
