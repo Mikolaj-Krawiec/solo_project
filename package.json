@@ -30,7 +30,7 @@
     "license": "ISC",
     "dependencies": {
         "json-server": "^0.14.2",
-        "lint": "^0.7.0"
+        "lint": "^0.8.8"
     },
     "devDependencies": {
         "autoprefixer-cli": "^1.0.0",
